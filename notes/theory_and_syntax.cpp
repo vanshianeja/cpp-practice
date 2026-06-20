@@ -337,3 +337,34 @@
 //         std::cout << "It is sunny outside";
 //     }
 // }
+
+#include <iostream>
+int main() {
+    
+    // STRING METHODS
+
+    std::string name;
+    std::string x = "Hello";
+
+    std::cout << "Enter your name: ";
+    std::getline(std::cin , name);
+
+    std::cout << name.length() << "\n" ;  // Finds length of the string
+    std::cout << name.empty() << "\n"; // returns 1 if empty and 0 if some value is there
+
+    x.clear(); // clears the string's value
+    name.append("@gmail.com"); // add values to the string
+
+    std::cout << "Your username is: " << name << "\n"; 
+
+    std::cout << name.at(2); // finds the character at a particular index
+    name.insert(3, "*"); //insert character
+
+    std::cout << name << "\n";
+
+    std::cout << name.find("f") << "\n"; //finds the index of a particular character
+    name.erase(0,2); // erases a portion of a string
+    std::cout << name;
+
+    return 0;
+}
