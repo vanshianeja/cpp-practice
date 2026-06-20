@@ -278,26 +278,62 @@
 //     }
 // }
 
-#include <iostream>
-int main() {
-    // ternary operator (?:) = replacement to an if/else statement
-    // condition ? expression1 : expression2;
+// #include <iostream>
+// int main() {
+//     // ternary operator (?:) = replacement to an if/else statement
+//     // condition ? expression1 : expression2;
 
-    int grade = 98;
+//     int grade = 98;
 
-    // if(grade >=60){
-    //     std::cout << "You pass!";
-    // } 
-    // else {
-    //     std::cout << "You fail!";
-    // }
-    // return 0;
+//     // if(grade >=60){
+//     //     std::cout << "You pass!";
+//     // } 
+//     // else {
+//     //     std::cout << "You fail!";
+//     // }
+//     // return 0;
 
-    grade >=60 ? std::cout << "You pass!" << "\n": std::cout << "You fail!" << "\n";
+//     grade >=60 ? std::cout << "You pass!" << "\n": std::cout << "You fail!" << "\n";
 
-    bool hungry = true;
-    hungry ? std::cout << "You are hungry"<<"\n" : std::cout << "You are full!"<<"\n";
-    //or
-    std::cout << (hungry ? "You are hungry. ":"You are full.")<<"\n";
-    return 0;
-}
+//     bool hungry = true;
+//     hungry ? std::cout << "You are hungry"<<"\n" : std::cout << "You are full!"<<"\n";
+//     //or
+//     std::cout << (hungry ? "You are hungry. ":"You are full.")<<"\n";
+//     return 0;
+// }
+
+// #include <iostream>
+// int main() {
+
+//     // Logical Operators
+//     // && = checks if two conditions are true
+//     // || = checks if atleast one condition is true
+//     // !  = reverses the logical state of its operand
+
+//     int temp;
+//     bool sunny = true;
+
+//     std::cout << "Enter the temperature: ";
+//     std::cin >> temp;
+
+//     // if (temp > 0 && temp < 30){
+//     //     std::cout << "The temperature is good!";
+//     // }
+//     // else {
+//     //     std::cout << "The temperature is bad!";
+//     // }
+
+//     if (temp <= 0 || temp >= 30){
+//         std::cout << "The temperature is bad!" << "\n";
+//     }
+//     else {
+//         std::cout << "The temperature is good!" << "\n";
+//     }
+
+//     if (!sunny == true){
+//         std::cout << "It is cloudy outside";
+//     }
+//     else {
+//         std::cout << "It is sunny outside";
+//     }
+// }
