@@ -442,30 +442,31 @@
 //     return 0;
 // }
 
-#include <iostream>
-int main() {
+// #include <iostream>
+// int main() {
     
-    // Nested Loops
+//     // Nested Loops
 
-    int rows;
-    int columns;
-    char symbol;
+//     int rows;
+//     int columns;
+//     char symbol;
 
-    std::cout << "Enter rows: ";
-    std::cin >> rows;
+//     std::cout << "Enter rows: ";
+//     std::cin >> rows;
 
-    std::cout << "Enter columns: ";
-    std::cin >> columns;
+//     std::cout << "Enter columns: ";
+//     std::cin >> columns;
 
-    std::cout << "Enter symbol: ";
-    std::cin >> symbol;
+//     std::cout << "Enter symbol: ";
+//     std::cin >> symbol;
 
-    for (int i = 0; i<rows; i++){
-        for(int j = 0; j<columns; j++){
-            std::cout << symbol << " " ;
-        }
-        std::cout << "\n";
-    }
+//     for (int i = 0; i<rows; i++){
+//         for(int j = 0; j<columns; j++){
+//             std::cout << symbol << " " ;
+//         }
+//         std::cout << "\n";
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
