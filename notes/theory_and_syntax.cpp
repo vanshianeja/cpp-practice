@@ -338,33 +338,134 @@
 //     }
 // }
 
+// #include <iostream>
+// int main() {
+    
+//     // STRING METHODS
+
+//     std::string name;
+//     std::string x = "Hello";
+
+//     std::cout << "Enter your name: ";
+//     std::getline(std::cin , name);
+
+//     std::cout << name.length() << "\n" ;  // Finds length of the string
+//     std::cout << name.empty() << "\n"; // returns 1 if empty and 0 if some value is there
+
+//     x.clear(); // clears the string's value
+//     name.append("@gmail.com"); // add values to the string
+
+//     std::cout << "Your username is: " << name << "\n"; 
+
+//     std::cout << name.at(2); // finds the character at a particular index
+//     name.insert(3, "*"); //insert character
+
+//     std::cout << name << "\n";
+
+//     std::cout << name.find("f") << "\n"; //finds the index of a particular character
+//     name.erase(0,2); // erases a portion of a string
+
+//     std::cout << name;
+
+//     return 0;
+// } 
+
+// #include <iostream>
+// int main() {
+
+//     // While Loop
+
+//     std::string name;
+
+//     while(name.empty()) {
+//         std::cout << "Enter your name: ";
+//         std::getline(std::cin, name);
+//     }
+
+//     //Infinite loop
+//     // while(1==1) {
+//     //     std::cout << "INFINITE LOOP";
+//     // }
+
+//     std::cout << "Hello "<< name;
+// }
+
+// #include <iostream>
+// int main() {
+
+//     //do-while looop = do some block of code first,
+//     //                 THEN repeat again if the condition is true
+
+//     int num;
+//     do {
+//         std::cout << "Enter a positive number: ";
+//         std::cin >> num;
+//     } while (num <0);
+
+//     std::cout << "The number is "<<num;
+//     return 0;
+
+// }
+
+// #include <iostream>
+// int main() {
+
+//     // For loop
+    
+//     for(int i = 1; i<=5; i++){
+//         std::cout << "Happy New Year!\n";
+//     }
+
+//     return 0;
+// }
+
+// #include <iostream>
+// int main() {
+
+//     // break = breaks out of a loop
+//     // continue = skips current iteration
+
+//     // for(int i = 0; i<=10;i++){
+//     //     if(i==3){
+//     //         break;
+//     //     }
+//     //     std::cout << i << "\n";
+//     // }
+
+//     for(int i = 0; i<=10;i++){
+//         if(i==3){
+//             continue;
+//         }
+//         std::cout << i << "\n";
+//     }
+
+//     return 0;
+// }
+
 #include <iostream>
 int main() {
     
-    // STRING METHODS
+    // Nested Loops
 
-    std::string name;
-    std::string x = "Hello";
+    int rows;
+    int columns;
+    char symbol;
 
-    std::cout << "Enter your name: ";
-    std::getline(std::cin , name);
+    std::cout << "Enter rows: ";
+    std::cin >> rows;
 
-    std::cout << name.length() << "\n" ;  // Finds length of the string
-    std::cout << name.empty() << "\n"; // returns 1 if empty and 0 if some value is there
+    std::cout << "Enter columns: ";
+    std::cin >> columns;
 
-    x.clear(); // clears the string's value
-    name.append("@gmail.com"); // add values to the string
+    std::cout << "Enter symbol: ";
+    std::cin >> symbol;
 
-    std::cout << "Your username is: " << name << "\n"; 
-
-    std::cout << name.at(2); // finds the character at a particular index
-    name.insert(3, "*"); //insert character
-
-    std::cout << name << "\n";
-
-    std::cout << name.find("f") << "\n"; //finds the index of a particular character
-    name.erase(0,2); // erases a portion of a string
-    std::cout << name;
+    for (int i = 0; i<rows; i++){
+        for(int j = 0; j<columns; j++){
+            std::cout << symbol << " " ;
+        }
+        std::cout << "\n";
+    }
 
     return 0;
 }
