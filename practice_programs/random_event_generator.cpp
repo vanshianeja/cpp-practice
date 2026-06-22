@@ -1,3 +1,4 @@
+// Random Event Generator
 #include <iostream>
 #include <ctime>
 
