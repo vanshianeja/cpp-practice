@@ -569,30 +569,30 @@
 //     std::cout << "Here is your " << topping1 << " and " << topping2 << " pizza!\n";
 // }
 
-#include <iostream>
+// #include <iostream>
 
-int myNum = 1;
+// int myNum = 1;
 
-void printNum();
+// void printNum();
 
-int main() {
+// int main() {
 
-    // Variable Scope
-    // Local variables = declared inside a function or block {}
-    // global variables = declared outside of all functions
+//     // Variable Scope
+//     // Local variables = declared inside a function or block {}
+//     // global variables = declared outside of all functions
 
-    int myNum = 3;
-    printNum();
-    std::cout << myNum << "\n";
+//     int myNum = 3;
+//     printNum();
+//     std::cout << myNum << "\n";
     
-    std::cout << ::myNum << "\n";
+//     std::cout << ::myNum << "\n";
 
-    return 0;
-}
+//     return 0;
+// }
 
-void printNum() {
-    int myNum = 2;
-    std::cout << myNum << "\n";
+// void printNum() {
+//     int myNum = 2;
+//     std::cout << myNum << "\n";
     
-    std::cout << ::myNum << "\n";
-}
+//     std::cout << ::myNum << "\n";
+// }
