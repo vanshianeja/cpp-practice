@@ -470,3 +470,129 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// void happyBirthday(std::string name, int age) {
+//     std::cout << "Happy Birthday to you!\n";
+//     std::cout << "Happy Birthday to you!\n";
+//     std::cout << "Happy Birthday dear " << name << "!\n";
+//     std::cout << "Happy Birthday to you!\n\n";
+
+//     std::cout << "May god bless you!\n";
+//     std::cout << "May god bless you!\n";
+//     std::cout << "May god bless you dear " << name << "!\n";
+//     std::cout << "Happy birthday to you!\n\n";
+
+//     std::cout << "Congratulations ! You turned "<< age << " today!\n\n";
+
+// }
+// int main() {
+    
+//     // function = a block of reuseable code
+    
+//     happyBirthday("Vanshi",19);
+
+//     std::string name = "Vanshi";
+//     int years = 20;
+
+//     happyBirthday(name,years);
+
+//     return 0;
+// }
+
+// #include <iostream>
+
+// double square(double length);
+// double cube(double length);
+
+// std::string concatString(std::string s1, std::string s2);
+// int main() {
+
+//     // return keyword = return a value back to the spot
+//     //                  where you called the encompassing function
+
+//     double length = 5.0;
+//     double area = square(length);
+//     double volume = cube(length);
+
+//     std::cout << "Area: " << area << "cm^2\n";
+//     std::cout << "Volume: " << volume << "cm^3\n";
+
+//     std::string first_name = "Vanshi";
+//     std::string last_name = "Aneja";
+//     std::string name = concatString(first_name,last_name);
+
+//     std::cout << "Your full name is: "<< name <<"\n";
+    
+//     return 0;
+// }
+
+// double square(double length){
+//     return length * length;
+// }
+
+// double cube(double length){
+//     return length * length * length;
+// }
+
+// std::string concatString(std::string s1, std::string s2){
+//     return s1 + " " + s2;
+// }
+
+// #include <iostream>
+
+// void bakePizza();
+// void bakePizza(std::string topping1);
+// void bakePizza(std::string topping1, std::string topping2);
+
+// int main(){
+
+//     // Function's name + parameters is called function signature
+
+//     // Overloaded functions 
+
+//     bakePizza();
+//     bakePizza("onion");
+//     bakePizza("onion","capsicum");
+
+// }
+
+// void bakePizza() {
+//     std::cout << "Here is your pizza!\n";
+// }
+
+// void bakePizza(std::string topping1) {
+//     std::cout << "Here is your " << topping1 << " pizza!\n";
+// }
+
+// void bakePizza(std::string topping1, std::string topping2) {
+//     std::cout << "Here is your " << topping1 << " and " << topping2 << " pizza!\n";
+// }
+
+#include <iostream>
+
+int myNum = 1;
+
+void printNum();
+
+int main() {
+
+    // Variable Scope
+    // Local variables = declared inside a function or block {}
+    // global variables = declared outside of all functions
+
+    int myNum = 3;
+    printNum();
+    std::cout << myNum << "\n";
+    
+    std::cout << ::myNum << "\n";
+
+    return 0;
+}
+
+void printNum() {
+    int myNum = 2;
+    std::cout << myNum << "\n";
+    
+    std::cout << ::myNum << "\n";
+}
