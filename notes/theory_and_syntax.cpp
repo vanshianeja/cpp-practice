@@ -596,3 +596,88 @@
     
 //     std::cout << ::myNum << "\n";
 // }
+
+// #include <iostream> 
+
+// int main() {
+
+//     // array = data structures that can hold multiple values
+//     //         values are accessed by an index number
+//     //         "kind of like a variable that holds multiple values"
+
+//     // Arrays should contain data having same same data type only!
+
+//     std::string cars[] = {"Kia", "Tata", "Ford", "Honda", "Mahindra"};
+
+//     std::cout << cars[1] << '\n';
+//     std::cout << cars[4] << '\n';
+
+//     cars[1] = "Hyundai";
+//     std::cout << cars[1] << '\n';
+
+//     std::string colors[3] ;
+
+//     colors[0] = "Red";
+//     colors[1] = "Blue";
+//     colors[2] = "Yellow";
+       
+//     std::cout << colors[2] << "\n";
+//     std::cout << colors[1] << "\n";
+
+// }
+
+// #include <iostream>
+
+// int main() {
+
+//     // sizeof() = determine the size in bytes of a:
+//     //            variable, data type, class, objects, etc.
+    
+//     std::string name = "Vanshi";
+//     double gpa = 2.5;
+//     char grade = 'A';
+//     bool student = true;
+//     char grades[] = {'A', 'B', 'C', 'D', 'E', 'F'};
+//     std::string students[] = {"Ram", "Riya", "Rohan", "Ridhi"};
+
+//     std::cout << sizeof(gpa) << " bytes\n";
+//     std::cout << sizeof(name) << " bytes\n";
+//     std::cout << sizeof(grade) << " bytes\n";
+//     std::cout << sizeof(student) << " bytes\n";
+//     std::cout << sizeof(grades) << " bytes\n";
+
+//     std::cout << sizeof(grades)/ sizeof(grade) << " elements\n";
+//     std::cout << sizeof(students)/ sizeof(std::string) << " elements\n";
+// }
+
+// #include <iostream>
+// int main() {
+
+//     // Iterate over an array 
+
+//     std::string colors[] = {"Blue", "Red", "Pink", "Yellow", "Green"};
+//     for(int i =0; i<= sizeof(colors); i++) {
+//         std::cout << colors[i] << '\n';
+//     }
+
+//     return 0;
+
+// }
+
+#include <iostream>
+int main() {
+
+    // foreach loop = loop that eases the tranversal over an 
+    //                iterable data set
+
+    std::string students[] = {"Jason", "Will", "Jack", "Brooke"};
+    for(std::string student : students) {
+        std::cout << student << '\n';
+    }
+
+    int marks[] = {93, 88, 67, 92, 74};
+    for(int mark : marks){
+        std::cout << mark << '\n';
+    }
+
+}
