@@ -681,28 +681,71 @@
 //     }
 // }
 
+// #include <iostream>
+
+// int searchArray(int array[], int size, int element);
+
+// int main() {
+    
+//     // Search element in an Array!
+
+//     int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//     int size = sizeof(numbers)/ sizeof(numbers[0]);
+//     int index;
+//     int myNum;
+
+//     std::cout << "Enter element to search for: " << '\n';
+//     std::cin >> myNum;
+
+//     index = searchArray(numbers, size, myNum);
+
+//     if(index != -1){
+//         std::cout << myNum << " is at the index "<< index;
+//     }
+//     else {
+//         std::cout << myNum << " is not in the array";
+//     }
+
+//     return 0;
+// }
+
+// int searchArray(int array[], int size, int element){
+//     for(int i = 0; i< size; i++){
+//         if(array[i] == element){
+//             return i;
+//         }
+//     }
+
+//     return -1;
+// }
+
 #include <iostream>
 
-double getTotal(double prices[], int size);
+void sort(int array[], int size);
 
 int main() {
 
-    // Pass array to a function
+    int array[] = {2, 6, 10, 1, 5, 3, 8, 4, 9, 7};
+    int size = sizeof(array)/ sizeof(array[0]);
+    
+    sort(array , size);
 
-    double prices[] = {39.99, 34.12, 44, 90.75};
-    int size = sizeof(prices)/sizeof(prices[0]);
-    double total = getTotal(prices, size); 
-    std::cout << "$" << total;
-
-    return 0;
+    for (int element : array){
+        std::cout << element << " ";
+    }
+    
 }
 
-double getTotal(double prices[], int size){
-    double total = 0;
+void sort(int array[], int size){
+    int temp;
 
-    for (int i = 0; i < size; i++){
-        total += prices[i];
+    for(int i = 0; i < size - 1; i++){
+        for(int j = 0; j < size - i - 1; j++){
+            if(array[j] > array[j+1]){
+                temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+            }
+        }
     }
-
-    return total;
 }
