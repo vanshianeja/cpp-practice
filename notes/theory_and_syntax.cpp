@@ -779,30 +779,52 @@
 //     }
 // }
 
+// #include <iostream>
+// int main() {
+
+//     // Fill an array with user input
+
+//     std::string foods[5];
+//     int size = sizeof(foods)/sizeof(foods[0]);
+//     std::string temp;
+
+//     for(int i = 0; i < size; i++){
+//         std::cout << "Enter the food you like or 'q' to quit #" << i + 1 << " : ";
+//         std::getline(std::cin, temp);
+//         if(temp == "q"){
+//             break;
+//         }
+//         else{
+//             foods[i] = temp;
+//         }
+//     }
+
+//     std::cout << "Your favourite food items are: ";
+//     for(int i = 0; !foods[i].empty(); i++) {
+//         std::cout << foods[i] << " ";
+//     }
+
+//     return 0;
+// }
+
 #include <iostream>
+
 int main() {
 
-    // Fill an array with user input
+    // Multidimentional Array
 
-    std::string foods[5];
-    int size = sizeof(foods)/sizeof(foods[0]);
-    std::string temp;
+    std::string colors[][3] = {{"red", "yellow", "blue"},
+                              {"black", "white", "brown"},
+                              {"gold", "silver", "grey"}};
+    
+    int rows = sizeof(colors)/sizeof(colors[0]);
+    int columns = sizeof(colors[0])/sizeof(colors[0][0]);
 
-    for(int i = 0; i < size; i++){
-        std::cout << "Enter the food you like or 'q' to quit #" << i + 1 << " : ";
-        std::getline(std::cin, temp);
-        if(temp == "q"){
-            break;
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < columns; j++){
+            std::cout << colors[i][j] << " ";
         }
-        else{
-            foods[i] = temp;
-        }
+        std::cout << "\n";
     }
 
-    std::cout << "Your favourite food items are: ";
-    for(int i = 0; !foods[i].empty(); i++) {
-        std::cout << foods[i] << " ";
-    }
-
-    return 0;
 }
