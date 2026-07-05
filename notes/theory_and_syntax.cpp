@@ -719,33 +719,90 @@
 //     return -1;
 // }
 
+// #include <iostream>
+
+// void sort(int array[], int size);
+
+// int main() {
+
+//     // Sort elements in an array
+
+//     int array[] = {2, 6, 10, 1, 5, 3, 8, 4, 9, 7};
+//     int size = sizeof(array)/ sizeof(array[0]);
+    
+//     sort(array , size);
+
+//     for (int element : array){
+//         std::cout << element << " ";
+//     }
+    
+// }
+
+// void sort(int array[], int size){
+//     int temp;
+
+//     for(int i = 0; i < size - 1; i++){
+//         for(int j = 0; j < size - i - 1; j++){
+//             if(array[j] > array[j+1]){
+//                 temp = array[j];
+//                 array[j] = array[j+1];
+//                 array[j+1] = temp;
+//             }
+//         }
+//     }
+// }
+
+// #include <iostream>
+
+// int main() {
+
+//     // fill() = Fills a range of elements with a specified value
+//     //          fill(begin, end, value)
+
+//     std::string foods[20];
+
+//     fill(foods, foods + 20, "pizza");
+
+//     for(std::string elements : foods){
+//         std::cout << elements << '\n';
+//     }
+
+//     const int SIZE = 30;
+//     std::string food[SIZE];
+
+//     fill(food, food + SIZE/3, "pizza");
+//     fill(food + SIZE/3, food + (2*SIZE)/3, "hamburger");
+//     fill(food + (2*SIZE)/3, food + SIZE, "hotdog");
+
+//     for(std::string elements : food){
+//         std::cout << elements << '\n';
+//     }
+// }
+
 #include <iostream>
-
-void sort(int array[], int size);
-
 int main() {
 
-    int array[] = {2, 6, 10, 1, 5, 3, 8, 4, 9, 7};
-    int size = sizeof(array)/ sizeof(array[0]);
-    
-    sort(array , size);
+    // Fill an array with user input
 
-    for (int element : array){
-        std::cout << element << " ";
-    }
-    
-}
+    std::string foods[5];
+    int size = sizeof(foods)/sizeof(foods[0]);
+    std::string temp;
 
-void sort(int array[], int size){
-    int temp;
-
-    for(int i = 0; i < size - 1; i++){
-        for(int j = 0; j < size - i - 1; j++){
-            if(array[j] > array[j+1]){
-                temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
-            }
+    for(int i = 0; i < size; i++){
+        std::cout << "Enter the food you like or 'q' to quit #" << i + 1 << " : ";
+        std::getline(std::cin, temp);
+        if(temp == "q"){
+            break;
+        }
+        else{
+            foods[i] = temp;
         }
     }
+
+    std::cout << "Your favourite food items are: ";
+    for(int i = 0; !foods[i].empty(); i++) {
+        std::cout << foods[i] << " ";
+    }
+
+    return 0;
 }
