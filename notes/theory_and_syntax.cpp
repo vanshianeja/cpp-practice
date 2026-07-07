@@ -807,24 +807,94 @@
 //     return 0;
 // }
 
-#include <iostream>
+// #include <iostream>
 
+// int main() {
+
+//     // Multidimentional Array
+
+//     std::string colors[][3] = {{"red", "yellow", "blue"},
+//                               {"black", "white", "brown"},
+//                               {"gold", "silver", "grey"}};
+    
+//     int rows = sizeof(colors)/sizeof(colors[0]);
+//     int columns = sizeof(colors[0])/sizeof(colors[0][0]);
+
+//     for(int i = 0; i < rows; i++){
+//         for(int j = 0; j < columns; j++){
+//             std::cout << colors[i][j] << " ";
+//         }
+//         std::cout << "\n";
+//     }
+
+// }
+
+// #include <iostream>
+
+// int main() {
+
+//     // memory address = a location in memory where data is stored
+//     // a memory address can n=be accessed with & (address-f operator)
+
+//     std::string name = "Vanshi";
+//     int age = 19;
+//     bool student = true;
+
+//     std::cout << &name << '\n';
+//     std::cout << &age << '\n';
+//     std::cout << &student << '\n';
+// }
+
+// #include <iostream>
+
+// void swap(std::string &x, std::string &y);
+
+// int main() {
+
+//     // Pass by value VS Pass by reference
+
+//     // If we pass by value , then both the original and the one's oresent there inside the function will have different memory addresses 
+    
+//     // If we want to change the values then we will call them by reference i.e. by using & (memory address) not by simply calling them by their value!
+
+//     std::string x = "Coke";
+//     std::string y = "Water";  
+
+//     swap(x, y);
+
+//     std::cout << "X: " << x << '\n';
+//     std::cout << "Y: " << y << '\n';
+
+// }
+
+// // void swap(std::string x, std::string y)  => This has different memory address , therefore the value of x and y will not change originally
+
+// void swap(std::string &x, std::string &y){   // This will have same memory address therefore the value will change.
+   
+//     std::string temp;
+
+//     temp = x;
+//     x = y;
+//     y = temp;
+// }
+
+#include <iostream>
+void printVal(std::string name, int age);
 int main() {
 
-    // Multidimentional Array
+    // const parameter = parameter that is effectively read-only
+    //                   code is more secure & conveys intent
+    //                   useful for references and pointers
 
-    std::string colors[][3] = {{"red", "yellow", "blue"},
-                              {"black", "white", "brown"},
-                              {"gold", "silver", "grey"}};
-    
-    int rows = sizeof(colors)/sizeof(colors[0]);
-    int columns = sizeof(colors[0])/sizeof(colors[0][0]);
+    std::string name = "Vanshi";
+    int age = 19; 
 
-    for(int i = 0; i < rows; i++){
-        for(int j = 0; j < columns; j++){
-            std::cout << colors[i][j] << " ";
-        }
-        std::cout << "\n";
-    }
+    printVal(name, age);
 
 }
+void printVal(const std::string name, const int age){
+    //name = " ";  // If we will not use const word then the name will be printed as " " and age will be 0
+    //age = 0;   // And by using & , the memory address will get fixed
+    std::cout << "Name: "<< name << "\n" << "Age: " << age <<"\n";
+}
+
