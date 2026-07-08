@@ -878,23 +878,23 @@
 //     y = temp;
 // }
 
-#include <iostream>
-void printVal(std::string name, int age);
-int main() {
+// #include <iostream>
+// void printVal(std::string name, int age);
+// int main() {
 
-    // const parameter = parameter that is effectively read-only
-    //                   code is more secure & conveys intent
-    //                   useful for references and pointers
+//     // const parameter = parameter that is effectively read-only
+//     //                   code is more secure & conveys intent
+//     //                   useful for references and pointers
 
-    std::string name = "Vanshi";
-    int age = 19; 
+//     std::string name = "Vanshi";
+//     int age = 19; 
 
-    printVal(name, age);
+//     printVal(name, age);
 
-}
-void printVal(const std::string name, const int age){
-    //name = " ";  // If we will not use const word then the name will be printed as " " and age will be 0
-    //age = 0;   // And by using & , the memory address will get fixed
-    std::cout << "Name: "<< name << "\n" << "Age: " << age <<"\n";
-}
+// }
+// void printVal(const std::string name, const int age){
+//     //name = " ";  // If we will not use const word then the name will be printed as " " and age will be 0
+//     //age = 0;   
+//     std::cout << "Name: "<< name << "\n" << "Age: " << age <<"\n";
+// }
 
