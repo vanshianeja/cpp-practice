@@ -898,3 +898,53 @@
 //     std::cout << "Name: "<< name << "\n" << "Age: " << age <<"\n";
 // }
 
+// #include <iostream>
+
+// int main() {
+
+//     // pointers = variable that stores a memory address of another variable
+//     //            sometimes it's easier to work with an address
+
+//     // & address-of operator
+//     // * dereference operator
+
+//     std::string name = "Vanshi";
+//     int age = 19;
+//     std::string freepizzas[5] = {"pizza1", "pizza2", "pizza3", "pizza4", "pizza5"};
+
+//     std::string *pName = &name;
+//     int *pAge = &age;
+//     std::string *pFreePizzas = freepizzas;
+
+//     std::cout << pName << '\n';
+
+//     std::cout << *pName << '\n';
+//     std::cout << *pAge << '\n';
+//     std::cout << *pFreePizzas << '\n';
+// }
+
+#include <iostream>
+
+int main() {
+
+    // Null value = a special value that means something has no value.
+    //              When a pointer is holding a null value,
+    //              that pointer is not pointing at anything (null pointer)
+
+    // nullptr = keyword represents a null pointer literal
+
+    // nullptrs are helpful when dteremining if an address
+    // was successfully assigned to a pointer
+
+    int *pointer = nullptr;
+    int x = 124;
+
+    //pointer = &x;
+
+    if(pointer == nullptr){
+        std::cout << "address was not assigned";
+    }
+    else {
+        std::cout << "Address was assigned\n";
+    }
+}
