@@ -923,28 +923,29 @@
 //     std::cout << *pFreePizzas << '\n';
 // }
 
-#include <iostream>
+// #include <iostream>
 
-int main() {
+// int main() {
 
-    // Null value = a special value that means something has no value.
-    //              When a pointer is holding a null value,
-    //              that pointer is not pointing at anything (null pointer)
+//     // Null value = a special value that means something has no value.
+//     //              When a pointer is holding a null value,
+//     //              that pointer is not pointing at anything (null pointer)
 
-    // nullptr = keyword represents a null pointer literal
+//     // nullptr = keyword represents a null pointer literal
 
-    // nullptrs are helpful when dteremining if an address
-    // was successfully assigned to a pointer
+//     // nullptrs are helpful when dteremining if an address
+//     // was successfully assigned to a pointer
 
-    int *pointer = nullptr;
-    int x = 124;
+//     int *pointer = nullptr;
+//     int x = 124;
 
-    //pointer = &x;
+//     pointer = &x;
 
-    if(pointer == nullptr){
-        std::cout << "address was not assigned";
-    }
-    else {
-        std::cout << "Address was assigned\n";
-    }
-}
+//     if(pointer == nullptr){
+//         std::cout << "address was not assigned";
+//     }
+//     else {
+//         std::cout << "Address was assigned\n";
+//     }
+// }
+
