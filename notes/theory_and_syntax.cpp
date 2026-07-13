@@ -990,54 +990,88 @@
 //     delete[] pGrades;
 // }
 
+// #include <iostream>
+// void walk(int steps);
+// int factorial(int num);
+// int main() {
+
+//     // recursion = a programming technique where a function
+//     //             invokes itself from within
+//     //             break a complex into a repeatable single step
+
+//     // (iterative vs recursive)
+
+//     // advantages = less code and is cleaner
+//     //              useful for sorting and searching algorithms
+
+//     // disadvantages = uses more memory
+//     //                 slower
+
+//     walk(10);
+//     std::cout << factorial(5);
+
+// }
+// void walk(int steps){
+//     // Iterative approach
+//     // for(int i = 0; i < steps; i++){
+//     //     std::cout << "You take a step!\n";
+//     // }
+
+//     // Recursive approach
+//     if(steps > 0){
+//         std::cout << "You take a step!\n";
+//         walk(steps - 1);
+//     }
+// }
+// int factorial(int num){
+
+//     // Iterative
+
+//     // int result = 1;
+//     // for(int i = 1; i <= num; i++){
+//     //     result = result * i;
+//     // }
+//     // return result;
+
+//     // Recursive
+//     if( num > 1){
+//         return num * factorial(num - 1);
+//     }
+//     else {
+//         return 1;
+//     }
+
 #include <iostream>
-void walk(int steps);
-int factorial(int num);
+// template <typename T>
+// T max(T x, T y){
+//     return ( x > y) ? x : y;
+// }
+
+template <typename T , typename U>
+auto max(T x, U y){
+    return ( x > y) ? x : y;
+}
+
+
+// int max(int x, int y){
+//     return ( x > y) ? x : y;
+// }
+// double max(double x, double y){
+//     return (x > y) ? x : y;
+// }
+// char max(char x, char y){
+//     return ( x > y) ? x : y;
+// }
 int main() {
 
-    // recursion = a programming technique where a function
-    //             invokes itself from within
-    //             break a complex into a repeatable single step
+    // function template = describes what a function looks like.
+    //                     Can be used to generate as many overloaded functions
+    //                     as needed, each using different data types
 
-    // (iterative vs recursive)
+    //                     Ex. "It's like a cookie-cutter..."
+    //                     "Cookies are the same shape, but the dough used can be different"
 
-    // advantages = less code and is cleaner
-    //              useful for sorting and searching algorithms
-
-    // disadvantages = uses more memory
-    //                 slower
-
-    walk(10);
-    std::cout << factorial(5);
-
-}
-void walk(int steps){
-    // Iterative approach
-    // for(int i = 0; i < steps; i++){
-    //     std::cout << "You take a step!\n";
-    // }
-
-    // Recursive approach
-    if(steps > 0){
-        std::cout << "You take a step!\n";
-        walk(steps - 1);
-    }
-}
-int factorial(int num){
-
-    // Iterative
-
-    // int result = 1;
-    // for(int i = 1; i <= num; i++){
-    //     result = result * i;
-    // }
-    // return result;
-
-    // Recursive
-    if( num > 1){
-        return num * factorial(num - 1);
-    }
-    else {
-        return 1;
-    }
+    std::cout << max('2', '5') << '\n';
+    std::cout << max(3, 7.3) << '\n';
+    std::cout << max(3.4, 6.8) << '\n';
 }
