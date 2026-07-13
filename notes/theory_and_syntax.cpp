@@ -949,3 +949,95 @@
 //     }
 // }
 
+// #include <iostream>
+// int main() {
+
+//     // dynamic memory = Memory that is allocated after the program
+//     //                  is already compiled & running.
+//     //                  Use the 'new' operator to allocate
+//     //                  memory in the heap rather than the stack
+
+//     //                  Useful when we don't know how much memory
+//     //                  we will need. Makes our programs more flexible,
+//     //                  especially when accepting user input.
+
+//     // int *pNum = NULL;
+//     // pNum = new int;
+//     // *pNum = 21;
+
+//     // std::cout << "address: " << pNum << '\n';
+//     // std::cout << "value: " << *pNum << '\n';
+
+//     // delete pNum;
+
+//     char *pGrades = NULL;
+//     int size;
+
+//     std::cout << "How many grades to enter in? ";
+//     std::cin >> size;
+
+//     pGrades = new char[size];
+
+//     for (int i = 0; i < size; i++){
+//         std::cout << "Enter grade #" << i + 1 << ": ";
+//         std::cin >> pGrades[i];
+//     }
+
+//     for (int i = 0; i <size; i++){
+//         std::cout << pGrades[i] << " ";
+//     }
+
+//     delete[] pGrades;
+// }
+
+#include <iostream>
+void walk(int steps);
+int factorial(int num);
+int main() {
+
+    // recursion = a programming technique where a function
+    //             invokes itself from within
+    //             break a complex into a repeatable single step
+
+    // (iterative vs recursive)
+
+    // advantages = less code and is cleaner
+    //              useful for sorting and searching algorithms
+
+    // disadvantages = uses more memory
+    //                 slower
+
+    walk(10);
+    std::cout << factorial(5);
+
+}
+void walk(int steps){
+    // Iterative approach
+    // for(int i = 0; i < steps; i++){
+    //     std::cout << "You take a step!\n";
+    // }
+
+    // Recursive approach
+    if(steps > 0){
+        std::cout << "You take a step!\n";
+        walk(steps - 1);
+    }
+}
+int factorial(int num){
+
+    // Iterative
+
+    // int result = 1;
+    // for(int i = 1; i <= num; i++){
+    //     result = result * i;
+    // }
+    // return result;
+
+    // Recursive
+    if( num > 1){
+        return num * factorial(num - 1);
+    }
+    else {
+        return 1;
+    }
+}
