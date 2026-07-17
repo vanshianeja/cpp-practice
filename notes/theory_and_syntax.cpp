@@ -1041,37 +1041,177 @@
 //         return 1;
 //     }
 
+// #include <iostream>
+// // template <typename T>
+// // T max(T x, T y){
+// //     return ( x > y) ? x : y;
+// // }
+
+// template <typename T , typename U>
+// auto max(T x, U y){
+//     return ( x > y) ? x : y;
+// }
+
+
+// // int max(int x, int y){
+// //     return ( x > y) ? x : y;
+// // }
+// // double max(double x, double y){
+// //     return (x > y) ? x : y;
+// // }
+// // char max(char x, char y){
+// //     return ( x > y) ? x : y;
+// // }
+// int main() {
+
+//     // function template = describes what a function looks like.
+//     //                     Can be used to generate as many overloaded functions
+//     //                     as needed, each using different data types
+
+//     //                     Ex. "It's like a cookie-cutter..."
+//     //                     "Cookies are the same shape, but the dough used can be different"
+
+//     std::cout << max('2', '5') << '\n';
+//     std::cout << max(3, 7.3) << '\n';
+//     std::cout << max(3.4, 6.8) << '\n';
+// }
+
+// #include <iostream>
+
+// struct student {
+//     std::string name;
+//     double cgpa;
+//     bool enrolled;
+//     bool present = true;
+// };
+
+// int main() {
+
+//     // struct = A structure that group related variables under one name
+//     //          structs can contain many different data types (string, )
+//     //          variables in a struct are known as "members"
+//     //          members can be access with . "Class Member Access Operator"
+
+//     // It is like an array that can store data of multiple data types
+
+//     student student1;
+//     student1.name = "Spongebob";
+//     student1.cgpa = 9.7;
+//     student1.enrolled = true;
+
+//     student student2;
+//     student2.name = "Patrick";
+//     student2.cgpa = 8.9;
+//     student2.enrolled = false;
+
+//     std::cout << student1.name << '\n';
+//     std::cout << student1.cgpa << '\n';
+//     std::cout << student1.enrolled << '\n';
+//     std::cout << student1.present << '\n';
+
+//     std::cout << student2.name << '\n';
+//     std::cout << student2.cgpa << '\n';
+//     std::cout << student2.enrolled << '\n';
+//     std::cout << student2.present << '\n';
+
+//     return 0;
+
+// }
+
+// #include <iostream>
+
+// struct Car{
+//     std::string model;
+//     int year;
+//     std::string color;
+// };
+
+// void printCar(Car &car);
+// void paintCar(Car &car, std::string color);
+
+// int main(){
+
+//     // Pass structs as arguments
+
+//     Car car1;
+//     Car car2;
+
+//     car1.model = "Mustang";
+//     car1.year = 2024;
+//     car1.color = "Black";
+
+//     car2.model = "Farari";
+//     car2.year = 2025;
+//     car2.color = "Red";
+
+//     paintCar(car1, "silver");
+//     paintCar(car2, "gold");
+
+//     std::cout << &car1 << '\n';     
+//     printCar(car1);
+//     printCar(car2);
+
+// }
+// void printCar(Car &car){        // Now Both addresses are same
+//     std::cout << &car << '\n';      
+//     std::cout << car.model << '\n';
+//     std::cout << car.year << '\n';
+//     std::cout << car.color << '\n';
+// }
+// void paintCar(Car &car, std::string color){  // If we did not use the address then the color won't get changed
+//     car.color = color;
+// }
+
 #include <iostream>
-// template <typename T>
-// T max(T x, T y){
-//     return ( x > y) ? x : y;
-// }
 
-template <typename T , typename U>
-auto max(T x, U y){
-    return ( x > y) ? x : y;
-}
+enum Day {sunday = 0, monday = 1, tuesday = 2, wednesday = 3, thursday = 4, friday = 5, saturday = 6};
 
+enum Flavour {vanilla, chocolate, strawberry, mint};
 
-// int max(int x, int y){
-//     return ( x > y) ? x : y;
-// }
-// double max(double x, double y){
-//     return (x > y) ? x : y;
-// }
-// char max(char x, char y){
-//     return ( x > y) ? x : y;
-// }
+enum Color {red, yellow, blue, green, orange, pink, white};
+
+enum Planet {mercury = 5880, venus = 12104, earth = 12756, 
+             mars = 67944, jupiter = 142984, saturn = 108728,
+            uranus = 511188, neptune = 545556, pluto = 789456};
+
 int main() {
 
-    // function template = describes what a function looks like.
-    //                     Can be used to generate as many overloaded functions
-    //                     as needed, each using different data types
+    // enums = a user-defined data type that consists
+    //         of paired named-integer constants.
+    //         GREAT is you have a set of potential options
 
-    //                     Ex. "It's like a cookie-cutter..."
-    //                     "Cookies are the same shape, but the dough used can be different"
+    Day today = sunday;
+    Flavour ice_cream = mint; 
 
-    std::cout << max('2', '5') << '\n';
-    std::cout << max(3, 7.3) << '\n';
-    std::cout << max(3.4, 6.8) << '\n';
+    switch (today){
+        case sunday :   std::cout << "It's sunday!\n";
+                            break;
+        case monday :   std::cout << "It's monday!\n";
+                            break;
+        case tuesday :   std::cout << "It's tuesday!\n";
+                            break;
+        case wednesday :   std::cout << "It's wednesday!\n";
+                            break;
+        case thursday :   std::cout << "It's thursday!\n";
+                            break;
+        case friday :   std::cout << "It's friday!\n";
+                            break;
+        case saturday :   std::cout << "It's saturday!\n";
+                            break;
+    }
+
+    switch (ice_cream){
+        case 0: 
+            std::cout << "I love vanilla ice-cream!\n";
+            break;
+        case 1: 
+            std::cout << "I love chocolate ice-cream!\n";
+            break;
+        case 2: 
+            std::cout << "I love strawberry ice-cream!\n";
+            break;
+        case 3: 
+            std::cout << "I love mint ice-cream!\n";
+            break;
+    }
 }
