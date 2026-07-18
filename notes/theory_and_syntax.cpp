@@ -1162,56 +1162,355 @@
 //     car.color = color;
 // }
 
+// #include <iostream>
+
+// enum Day {sunday = 0, monday = 1, tuesday = 2, wednesday = 3, thursday = 4, friday = 5, saturday = 6};
+
+// enum Flavour {vanilla, chocolate, strawberry, mint};
+
+// enum Color {red, yellow, blue, green, orange, pink, white};
+
+// enum Planet {mercury = 5880, venus = 12104, earth = 12756, 
+//              mars = 67944, jupiter = 142984, saturn = 108728,
+//             uranus = 511188, neptune = 545556, pluto = 789456};
+
+// int main() {
+
+//     // enums = a user-defined data type that consists
+//     //         of paired named-integer constants.
+//     //         GREAT is you have a set of potential options
+
+//     Day today = sunday;
+//     Flavour ice_cream = mint; 
+
+//     switch (today){
+//         case sunday :   std::cout << "It's sunday!\n";
+//                             break;
+//         case monday :   std::cout << "It's monday!\n";
+//                             break;
+//         case tuesday :   std::cout << "It's tuesday!\n";
+//                             break;
+//         case wednesday :   std::cout << "It's wednesday!\n";
+//                             break;
+//         case thursday :   std::cout << "It's thursday!\n";
+//                             break;
+//         case friday :   std::cout << "It's friday!\n";
+//                             break;
+//         case saturday :   std::cout << "It's saturday!\n";
+//                             break;
+//     }
+
+//     switch (ice_cream){
+//         case 0: 
+//             std::cout << "I love vanilla ice-cream!\n";
+//             break;
+//         case 1: 
+//             std::cout << "I love chocolate ice-cream!\n";
+//             break;
+//         case 2: 
+//             std::cout << "I love strawberry ice-cream!\n";
+//             break;
+//         case 3: 
+//             std::cout << "I love mint ice-cream!\n";
+//             break;
+//     }
+// }
+
+
+/* OBJECT ORIENTED PROGRAMMING USING C++ */
+// #include <iostream>
+
+// class Human{
+//     public:
+//         // std::string name;
+//         // std::string occupation;
+//         // int age;
+
+//         std::string name = "Riya";
+//         std::string occupation = "Teacher";
+//         int age = 32;
+
+
+//         void eat(){
+//             std::cout << "This person is eating!\n";
+//         }
+//         void drink(){
+//             std::cout << "This person is drinking!\n";
+//         }
+//         void sleep(){
+//             std::cout << "This person is sleeping!\n";
+//         }
+// };
+
+// int main() {
+
+//     // object = A collection of attributes and methods
+//     //          They can have characterstics and could perform actions
+//     //          Can be used to mimic real world items (ex. Phone, Book, Dog)
+//     //          Created from a class which acts as a "blue-print"
+
+//     // Human human1;
+
+//     // human1.name = "Rick";
+//     // human1.occupation = "Scientist";
+//     // human1.age = 43;
+
+//     // std::cout << human1.name << '\n';
+//     // std::cout << human1.occupation << '\n';
+//     // std::cout << human1.age << '\n';
+
+//     // human1.eat();
+//     // human1.drink();
+//     // human1.sleep();
+
+//     // Human human2;
+
+//     // human2.name = "Monty";
+//     // human2.occupation = "Student";
+//     // human2.age = 13;
+
+//     // std::cout << human2.name << '\n';
+//     // std::cout << human2.occupation << '\n';
+//     // std::cout << human2.age << '\n';
+
+//     // human2.eat();
+//     // human2.drink();
+//     // human2.sleep();
+
+//     Human human1;
+//     Human human2;
+
+//     std::cout << human1.name << '\n';
+//     std::cout << human1.occupation << '\n';
+//     std::cout << human1.age << '\n';
+//     std::cout << human2.name << '\n';
+//     std::cout << human2.occupation << '\n';
+//     std::cout << human2.age << '\n';
+   
+// }
+
+// #include <iostream>
+// class Car{
+//     public:
+//         std::string make;
+//         std::string model;
+//         int year;
+//         std::string color;
+
+//         void accelerate(){
+//             std::cout << "You stepped on the gas!\n";
+//         }
+//         void brake(){
+//             std::cout << "You stepped on the brake!\n";
+//         }
+// };
+
+// int main(){
+
+//     Car car1;
+
+//     car1.make = "Ford";
+//     car1.model = "Mustang";
+//     car1.year = 2023;
+//     car1.color = "Silver";
+
+//     std::cout << car1.make << '\n';
+//     std::cout << car1.model << '\n';
+//     std::cout << car1.year << '\n';
+//     std::cout << car1.color << '\n';
+
+//     car1.accelerate();
+//     car1.brake();
+// }
+
+/* CONSTRUCTORS */
+// #include <iostream>
+
+// class Student{
+//     public:
+//         std::string name;
+//         int age;
+//         double gpa;
+
+//     Student(std::string name, int a, double gpa){
+//         this->name = name;
+//         // this->age = age;
+//         age = a;
+//         this->gpa = gpa;
+//     }
+// };
+
+// int main(){
+
+//     // constructor = special method that is automatically called when an object is instantiated
+//     //               useful for assigning values to attributes as arguments
+
+//     Student student1("Spongebob", 21, 3.5);
+
+//     std::cout << student1.name << '\n';
+//     std::cout << student1.age << '\n';
+//     std::cout << student1.gpa << '\n';
+// }
+
+/* CONSTUCTOR OVERLOADING */
+// #include <iostream>
+
+// class Pizza{
+//     public:
+//         std::string topping1;
+//         std::string topping2;
+
+//     Pizza(){
+
+//     }
+//     Pizza(std::string topping1){
+//         this->topping1 = topping1;
+//     }
+//     Pizza(std::string topping1, std::string topping2){
+//         this->topping1 = topping1;
+//         this->topping2 = topping2;
+//     }
+// };
+// int main(){
+
+//     // overloaded constructors = multiple constructors with same name but different parameters
+//     //                           allows for varying arguments when instantiating an object
+
+//     Pizza pizza1("corn");
+//     Pizza pizza2("onion", "capsicum");
+//     Pizza pizza3;
+    
+//     std::cout << pizza1.topping1 << '\n';
+//     std::cout << pizza2.topping1 << '\n';
+//     std::cout << pizza2.topping2 << '\n';
+// }
+
+/* GETTERS AND SETTERS */
+// #include <iostream>
+
+// class Stove{
+//     private:
+//         int temperature = 0;
+    
+//     public:
+
+//     Stove(int temperature){
+//         setTemperature(temperature);
+//     }
+
+//     int getTemperature(){
+//         return temperature;
+//     }
+
+//     void setTemperature(int temperature){
+//         if(temperature < 0){
+//             this->temperature = 0;
+//         }
+//         else if (temperature >= 10){
+//             this->temperature = 10;
+//         }
+//         else{
+//             this->temperature = temperature;
+//         }
+        
+//     }
+// };
+
+// int main(){
+
+//     // Abstraction = hiding unnecessary data from outside a class
+//     // getter = function that makes a private attribute READABLE
+//     // setter = function that makes a private attribute WRITEABLE
+
+//     Stove stove(2);
+
+//     std::cout << "The temperature setting is: "<< stove.getTemperature() << '\n';
+
+//     stove.setTemperature(4);
+//     std::cout << "The temperature setting is: "<< stove.getTemperature() << '\n';
+// }
+
+/* INHERITANCE */
+// #include <iostream>
+
+// class Animal{
+//     public:
+//         bool alive = true;
+//     void eat(){
+//         std::cout << "This animal is eating.\n";
+//     }
+// };
+
+// class Dog : public Animal{
+//     public:
+
+//     void bark(){
+//         std::cout << "The dog goes woof!\n";
+//     }
+// };
+
+// class Cat : public Animal{
+//     public:
+
+//     void meow(){
+//         std::cout << "The cat is meowing!\n";
+//     }
+// };
+
+// int main(){
+
+//     // inheritance = A class can recieve attributes and methods from another class
+//     //               Children classes inherit from a Parent class
+//     //               Helps to reuse similar code found within multiple classes
+
+//     Dog dog;
+//     Cat cat;
+
+//     std::cout << dog.alive << "\n";
+//     dog.eat();
+//     dog.bark();
+
+//     std::cout << cat.alive << "\n";
+//     cat.eat();
+//     cat.meow();
+// }
+
 #include <iostream>
 
-enum Day {sunday = 0, monday = 1, tuesday = 2, wednesday = 3, thursday = 4, friday = 5, saturday = 6};
+class Shape{
+    public:
+        double area;
+        double volume;
+};
 
-enum Flavour {vanilla, chocolate, strawberry, mint};
-
-enum Color {red, yellow, blue, green, orange, pink, white};
-
-enum Planet {mercury = 5880, venus = 12104, earth = 12756, 
-             mars = 67944, jupiter = 142984, saturn = 108728,
-            uranus = 511188, neptune = 545556, pluto = 789456};
-
-int main() {
-
-    // enums = a user-defined data type that consists
-    //         of paired named-integer constants.
-    //         GREAT is you have a set of potential options
-
-    Day today = sunday;
-    Flavour ice_cream = mint; 
-
-    switch (today){
-        case sunday :   std::cout << "It's sunday!\n";
-                            break;
-        case monday :   std::cout << "It's monday!\n";
-                            break;
-        case tuesday :   std::cout << "It's tuesday!\n";
-                            break;
-        case wednesday :   std::cout << "It's wednesday!\n";
-                            break;
-        case thursday :   std::cout << "It's thursday!\n";
-                            break;
-        case friday :   std::cout << "It's friday!\n";
-                            break;
-        case saturday :   std::cout << "It's saturday!\n";
-                            break;
+class Cube : public Shape{
+    public:
+        double side;
+    Cube(double side){
+        this->side = side;
+        this->area = side * side * 6;
+        this->volume = side * side *side;
     }
+};
 
-    switch (ice_cream){
-        case 0: 
-            std::cout << "I love vanilla ice-cream!\n";
-            break;
-        case 1: 
-            std::cout << "I love chocolate ice-cream!\n";
-            break;
-        case 2: 
-            std::cout << "I love strawberry ice-cream!\n";
-            break;
-        case 3: 
-            std::cout << "I love mint ice-cream!\n";
-            break;
+class Sphere : public Shape{
+    public:
+        double radius;
+    Sphere(double radius){
+        this->radius = radius;
+        this->area = 4 * 3.14159 * (radius * radius);
+        this->volume = (4/3.0) * 3.14159 * (radius * radius * radius);
     }
+};
+
+int main(){
+
+    Cube cube(10);
+    Sphere sphere(5);
+
+    std::cout << "Area of cube: " << cube.area << "cm^2\n";
+    std::cout << "Volume of cube: " << cube.volume << "cm^3\n";
+
+    std::cout << "Area of sphere: " << sphere.area << "cm^2\n";
+    std::cout << "Volume of sphere: " << sphere.volume << "cm^3\n";
 }
